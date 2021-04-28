@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { TableRoutingModule } from './table-routing.module';
+import { UsersComponent } from './users/users.component';
 
 // Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material-module';
+import { MaterialModule } from '../material-module';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { FormsModule } from '@angular/forms';
@@ -14,18 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    UsersComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    TableRoutingModule,
     MaterialModule,
     LayoutModule,
     FormsModule,
     HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class TableModule { }
